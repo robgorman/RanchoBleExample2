@@ -50,7 +50,7 @@ public class ScanActivity extends AppCompatActivity {
   private boolean allNecessaryPermissionsGranted(){
     // on Android 6 (Marshmallow) sdk 23 and above we need Coarse location permission to receive the result of BLE Scans
     int locationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
-     return locationPermission == PackageManager.PERMISSION_GRANTED;
+    return locationPermission == PackageManager.PERMISSION_GRANTED;
   }
 
   @Override
@@ -196,10 +196,6 @@ private void startTheActivity(){
     }
   }
 
-  private void doPermissions(){
-    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-            REQUEST_ACCESS_COARSE_LOCATION);
-  }
 
   private void requestPermissions() {
 
@@ -212,14 +208,19 @@ private void startTheActivity(){
                   new Handler().post(new Runnable() {
                     @Override
                     public void run() {
-                      doPermissions();
+                      doTheRequest();
                     }
                   });
                 }
               });
     } else {
-      doPermissions();
+      doTheRequest();
     }
+  }
+
+  private void doTheRequest(){
+    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+            REQUEST_ACCESS_COARSE_LOCATION);
   }
 
   @Override
@@ -230,12 +231,8 @@ private void startTheActivity(){
         // If request is cancelled, the result arrays are empty.
         if (grantResults.length > 0
                 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
            startTheActivity();
-
-
         } else {
-
           // permission denied, boo! Disable the
           // functionality that depends on this permission.
           updateViewFromState();
