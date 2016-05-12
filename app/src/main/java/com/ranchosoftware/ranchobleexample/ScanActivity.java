@@ -73,7 +73,7 @@ public class ScanActivity extends AppCompatActivity {
 
   }
 
-private void startTheActivity(){
+  private void startTheActivity(){
 
     scanButton.setOnClickListener(new View.OnClickListener() {
       @Override

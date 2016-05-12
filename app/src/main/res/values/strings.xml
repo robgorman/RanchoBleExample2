@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RanchoBleExample</string>
+    <string name="app_name">Rancho Software BLE Example</string>
     <string name="ble_error">BLE Error</string>
     <string name="no_device_ble_support">This device does not support Bluetooth Low Energy. It is required to enable features of this Sample App.</string>
     <string name="scan_label">Scan</string>
