@@ -1,4 +1,4 @@
-package com.ranchosoftware.ranchobleexample.utility;
+package com.ranchosoftware.ranchobleexample2.utility;
 
 /**
  * Created by rob on 12/23/14.

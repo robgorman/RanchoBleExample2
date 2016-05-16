@@ -1,4 +1,4 @@
-package com.ranchosoftware.ranchobleexample;
+package com.ranchosoftware.ranchobleexample2;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

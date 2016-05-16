@@ -1,4 +1,4 @@
-package com.ranchosoftware.ranchobleexample;
+package com.ranchosoftware.ranchobleexample2;
 
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
@@ -22,11 +22,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.ranchosoftware.ranchobleexample.utility.Advertisement;
-import com.ranchosoftware.ranchobleexample.utility.AlertUtility;
-import com.ranchosoftware.ranchobleexample.utility.IBeaconAdvertisement;
+import com.ranchosoftware.ranchobleexample2.utility.Advertisement;
+import com.ranchosoftware.ranchobleexample2.utility.AlertUtility;
+import com.ranchosoftware.ranchobleexample2.utility.IBeaconAdvertisement;
 
 import java.util.ArrayList;
 import java.util.List;

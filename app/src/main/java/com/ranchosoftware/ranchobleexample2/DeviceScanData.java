@@ -1,8 +1,8 @@
-package com.ranchosoftware.ranchobleexample;
+package com.ranchosoftware.ranchobleexample2;
 
 import android.bluetooth.BluetoothDevice;
 
-import com.ranchosoftware.ranchobleexample.utility.Advertisement;
+import com.ranchosoftware.ranchobleexample2.utility.Advertisement;
 
 /**
  * Created by rob on 5/12/16.

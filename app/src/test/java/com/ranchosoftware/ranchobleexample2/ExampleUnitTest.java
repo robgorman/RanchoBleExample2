@@ -1,4 +1,4 @@
-package com.ranchosoftware.ranchobleexample;
+package com.ranchosoftware.ranchobleexample2;
 
 import org.junit.Test;
 

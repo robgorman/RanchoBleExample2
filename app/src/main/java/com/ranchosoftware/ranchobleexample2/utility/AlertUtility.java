@@ -1,4 +1,4 @@
-package com.ranchosoftware.ranchobleexample.utility;
+package com.ranchosoftware.ranchobleexample2.utility;
 
 import android.app.AlertDialog;
 import android.content.Context;
