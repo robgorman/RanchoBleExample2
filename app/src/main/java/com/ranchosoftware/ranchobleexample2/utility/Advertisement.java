@@ -263,10 +263,10 @@ public class Advertisement {
         {
           uuid[i] = next[i+5];
         }
-        int major = next[22] << 8;
-        major += next[21];
-        int minor = next[24] << 8;
-        minor += next[23];
+        int major = next[21] << 8;
+        major += next[22];
+        int minor = next[23] << 8;
+        minor += next[24];
         ByteBuffer bb = ByteBuffer.wrap(uuid);
         long first = bb.getLong();
         long second = bb.getLong();
@@ -483,7 +483,7 @@ public class Advertisement {
     return LEBluetoothDeviceAddress;
   }
 
-  public byte[] getLERole() {
+  public byte[] getLeRole() {
     return LERole;
   }
 

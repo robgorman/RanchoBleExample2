@@ -4,4 +4,5 @@
     <string name="no_device_ble_support">This device does not support Bluetooth Low Energy. It is required to enable features of this Sample App.</string>
     <string name="scan_label">Scan</string>
     <string name="scanning">Scanning...</string>
+    <string name="noname">Name Not Present</string>
 </resources>

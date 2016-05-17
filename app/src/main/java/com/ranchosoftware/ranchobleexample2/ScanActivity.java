@@ -17,12 +17,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.ranchosoftware.ranchobleexample2.application.RanchoApplication;
 import com.ranchosoftware.ranchobleexample2.utility.Advertisement;
 import com.ranchosoftware.ranchobleexample2.utility.AlertUtility;
 import com.ranchosoftware.ranchobleexample2.utility.IBeaconAdvertisement;
@@ -30,7 +32,7 @@ import com.ranchosoftware.ranchobleexample2.utility.IBeaconAdvertisement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScanActivity extends AppCompatActivity {
+public class ScanActivity extends BaseActivity {
 
   private Button scanButton;
   private ProgressBar progressBarScanning;
@@ -63,6 +65,18 @@ public class ScanActivity extends AppCompatActivity {
     devicesAdapter = new DevicesAdapter(this, deviceScanList);
     devicesList.setAdapter(devicesAdapter);
 
+    devicesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        DeviceScanData data = devicesAdapter.getItem(position);
+
+        RanchoApplication app = getApp();
+        app.setDeviceOfInterest(data);
+        Intent intent = new Intent(ScanActivity.this, BleAdvertisementActivity.class);
+        startActivity(intent);
+
+      }
+    });
     // We code to the permissions model of Marshmellos (api >= 23)
     if (allNecessaryPermissionsGranted()) {
       startTheActivity();
