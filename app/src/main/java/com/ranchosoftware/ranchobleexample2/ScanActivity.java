@@ -2,6 +2,7 @@ package com.ranchosoftware.ranchobleexample2;
 
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 import com.ranchosoftware.ranchobleexample2.application.RanchoApplication;
 import com.ranchosoftware.ranchobleexample2.utility.Advertisement;
 import com.ranchosoftware.ranchobleexample2.utility.AlertUtility;
+import com.ranchosoftware.ranchobleexample2.utility.BleUtility;
 import com.ranchosoftware.ranchobleexample2.utility.IBeaconAdvertisement;
 
 import java.util.ArrayList;
@@ -291,7 +293,7 @@ public class ScanActivity extends BaseActivity {
         } else if (!data.getAdvertisement().getShortenedLocalName().equals("")){
           nameTextView.setText(data.getAdvertisement().getShortenedLocalName());
         } else {
-          nameTextView.setText("  - ");
+          nameTextView.setText("Name not Present");
         }
       }
 
@@ -308,6 +310,21 @@ public class ScanActivity extends BaseActivity {
 
       companyTextView.setText(data.getAdvertisement().getCompany());
 
+      TextView viewAddress = (TextView) convertView.findViewById(R.id.tvDeviceAddress);
+      TextView viewBluetoothClass = (TextView) convertView.findViewById(R.id.tvBluetoothClass);
+      TextView viewBondState = (TextView) convertView.findViewById(R.id.tvBondState);
+      TextView viewType = (TextView) convertView.findViewById(R.id.tvType);
+
+      viewAddress.setText(device.getAddress());
+
+      String deviceClass = BleUtility.formatDeviceClass(device.getBluetoothClass().getMajorDeviceClass());
+      viewBluetoothClass.setText(deviceClass);
+
+      String bond = BleUtility.formatBondState(device.getBondState());
+      viewBondState.setText(bond);
+
+      String type = BleUtility.formatDeviceType(device.getType());
+      viewType.setText(type);
       return convertView;
 
     }

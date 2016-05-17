@@ -99,7 +99,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:id="@+id/tvName"/>
+                    android:id="@+id/tvName"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -121,7 +122,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Medium Text"
-                    android:id="@+id/tvCompany"/>
+                    android:id="@+id/tvCompany"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -198,8 +200,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Incomplet List 128 Bit Service Uuids"
-                        android:id="@+id/textView10"/>
+                        android:text="Incomplete List 128 Bit Service Uuids"
+                        android:id="@+id/textView10"
+                        android:textIsSelectable="true"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -272,7 +275,21 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/layoutBeacon">
+                android:id="@+id/layoutBeacon"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/highlighted_text_material_dark">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Beacon Data"
+                    android:id="@+id/textView25"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"/>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -292,7 +309,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/tvBeaconMinor"/>
+                        android:id="@+id/tvBeaconMinor"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -313,13 +331,21 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/tvBeaconMajor"/>
+                        android:id="@+id/tvBeaconMajor"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Proximity Uuid:"
+                        android:id="@+id/textView28"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -327,7 +353,8 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Small Text"
                         android:id="@+id/tvProximityUuid"
-                        android:layout_marginLeft="16dp"/>
+                        android:layout_marginLeft="16dp"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -339,8 +366,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Company:"
+                        android:id="@+id/textView27"
+                        android:layout_marginRight="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/tvBeaconCompany"/>
+                        android:id="@+id/tvBeaconCompany"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -360,7 +396,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:id="@+id/tvCalibratedPower"/>
+                        android:id="@+id/tvCalibratedPower"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -384,7 +421,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Medium Text"
-                    android:id="@+id/tvTxPower"/>
+                    android:id="@+id/tvTxPower"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -405,7 +443,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/tvDeviceClass"/>
+                    android:id="@+id/tvDeviceClass"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -427,7 +466,8 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Medium Text"
                     android:id="@+id/tvManufactureSpecific"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -449,7 +489,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Medium Text"
-                    android:id="@+id/tvLeRole"/>
+                    android:id="@+id/tvLeRole"
+                    android:textColor="@android:color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -475,7 +516,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:id="@+id/tvAppearance"/>
+                        android:id="@+id/tvAppearance"
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
             </LinearLayout>
 

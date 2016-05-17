@@ -8,6 +8,7 @@ import java.util.UUID;
  */
 public class UuidUtils {
   public static UUID as128BitUuid(byte[] bytes) {
+    assert bytes.length == 16;
     ByteBuffer bb = ByteBuffer.wrap(bytes);
     long firstLong = bb.getLong();
     long secondLong = bb.getLong();

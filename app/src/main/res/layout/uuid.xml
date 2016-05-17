@@ -10,5 +10,6 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
         android:id="@+id/tvUuid"
-        android:layout_marginRight="16dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="16dp"/>
 </LinearLayout>
